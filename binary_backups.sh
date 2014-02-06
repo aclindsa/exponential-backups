@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# Written by Aaron Lindsay <aaron@aclindsay.com>
 
 # These knobs control which backups to keep, and how long to keep them for. A
 # backup is kept if its distance from the UNIX epoch in days divides evenly by
