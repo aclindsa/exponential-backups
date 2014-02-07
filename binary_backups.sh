@@ -68,7 +68,7 @@ while getopts "hrd:i:" OPTION; do
     i)
       input=$OPTARG
       if [[ ! -f $input ]]; then
-        echo "Error: \"$input\" is not a file"
+        echo "Error: \"$input\" is not a file" 1>&2
         usage
         exit 1
       fi
@@ -76,7 +76,7 @@ while getopts "hrd:i:" OPTION; do
     d)
       current_date=$OPTARG
       if [[ $(invalid_date "$current_date") ]]; then
-        echo "Error: \"$current_date\" is not a valid date"
+        echo "Error: \"$current_date\" is not a valid date" 1>&2
         usage
         exit 1
       fi
@@ -99,7 +99,7 @@ current_days=$(days_since_epoch "$current_date")
 
 while read line; do
   if [[ $(invalid_date "$line") ]]; then
-    echo "Error: \"$line\" is not a valid date"
+    echo "Error: \"$line\" is not a valid date" 1>&2
     exit 1
   fi
   backup_days=$(days_since_epoch "$line")
