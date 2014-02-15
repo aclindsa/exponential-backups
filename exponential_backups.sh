@@ -53,7 +53,7 @@ OPTIONS:
    -h       Show this message
    -i FILE  Read candidate backup dates from FILE instead of stdin
    -d DATE  Calculate which backups should be kept from this date instead of
-            today 
+            today
    -r       Reverse which dates are displayed (show those which should be
             deleted instead of kept)
 EOF
